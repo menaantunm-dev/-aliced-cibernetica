@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALICED INTELIGENTE CIBERNÉTICA IA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Fondo de Lluvia de Rosas -->
+  <canvas id="rose-rain"></canvas>
+
+  <!-- Navegación Principal -->
+  <nav class="navbar">
+    <div class="logo-container">
+      <span class="logo-text">⚡ ALICED INTELIGENTE CIBERNÉTICA IA</span>
+    </div>
+    <div class="nav-actions">
+      <button class="cyber-btn" id="btn-toggle-history">📜 Historial</button>
+      <select id="lang-select" class="cyber-select">
+        <option value="es-ES">🌐 Español</option>
+        <option value="en-US">🌐 English</option>
+      </select>
+      <button class="cyber-btn" onclick="openModal('creator-modal')">👤 Creadora</button>
+    </div>
+  </nav>
+
+  <!-- Contenedor Principal -->
+  <main class="main-container">
+    
+    <!-- Panel Asistente AURA IA -->
+    <aside class="aura-panel">
+      <div class="aura-avatar-container">
+        <div class="robot-head">
+          <div class="robot-face">
+            <div class="eyes">
+              <span class="eye left"></span>
+              <span class="eye right"></span>
+            </div>
+            <div class="blush"></div>
+            <div class="robot-mouth"></div>
+          </div>
+        </div>
+      </div>
+      <h3>🤖 AURA IA</h3>
+      <p class="aura-title">Ingeniera en Sistemas & Asistente Cibernética</p>
+      <p class="aura-status"><span class="status-dot"></span> EN LÍNEA | Creada por María Mercedes Mena Antún</p>
+      
+      <div class="voice-controls">
+        <button id="btn-listen" class="cyber-btn voice">🎙️ Hablar a AURA</button>
+        <button id="btn-speak" class="cyber-btn voice">🔊 Voz AURA (Femenina)</button>
+      </div>
+    </aside>
+
+    <!-- Consola Central -->
+    <section class="console-panel">
+      <header class="console-header">
+        <h2>TERMINAL DE ANALÍTICA DE DATOS SENIOR</h2>
+        <p>Motor Neuronal Creado por María Mercedes Mena Antún</p>
+      </header>
+
+      <!-- Ventana Principal de Chat Superior -->
+      <div id="chat-output" class="chat-output">
+        <div class="msg aura-msg">
+          <strong>AURA IA:</strong> Sistema <strong>ALICED INTELIGENTE CIBERNÉTICA IA</strong> inicializado. Creado por María Mercedes Mena Antún. ¿En qué puedo asistirte hoy?
+        </div>
+      </div>
+
+      <!-- Gráficos de Analítica -->
+      <div class="chart-container">
+        <canvas id="analyticsChart"></canvas>
+      </div>
+
+      <!-- Entrada de Comandos -->
+      <div class="input-section">
+        <div class="input-row">
+          <input type="text" id="user-input" class="cyber-input" placeholder="Escribe un comando o consulta a ALICED...">
+          <button id="send-btn" class="cyber-btn action">ENVIAR</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel Lateral de Historial -->
+    <aside id="history-panel" class="history-panel">
+      <div class="history-header">
+        <h3>📜 Historial de Consultas</h3>
+        <button id="btn-clear-history" class="cyber-btn danger small">Limpiar</button>
+      </div>
+      <div id="history-list" class="history-list"></div>
+    </aside>
+
+  </main>
+
+  <!-- Modal Creadora -->
+  <div id="creator-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal('creator-modal')">&times;</span>
+      <h2>CREADORA DE LA IA</h2>
+      <hr class="cyber-hr">
+      <h3>María Mercedes Mena Antún</h3>
+      <p><strong>Rol:</strong> Arquitecta Digital y Creadora de ALICED IA</p>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
